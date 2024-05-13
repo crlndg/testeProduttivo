@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.3 on win32)" generated="20240512 23:48:30.976" rpa="false" schemaversion="4">
+<suite id="s1" name="testCaseProduttivo" source="c:\Users\carol\Documents\_Robot\testeProduttivo\testCases\testCaseProduttivo.robot">
+<test id="s1-t1" name="CT10 - Verificar se ao preencher todos os dados corretamente o botão &quot;Iniciar teste&quot; é habilitado" line="10">
+<kw name="Dado que eu abra o site" library="cadastro">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 23:48:31.361" level="INFO">Opening browser 'chrome' to base url 'https://www.produttivo.com.br/cadastro/'.</msg>
+<status status="PASS" starttime="20240512 23:48:31.361" endtime="20240512 23:48:35.558"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 23:48:35.558" endtime="20240512 23:48:35.600"/>
+</kw>
+<status status="PASS" starttime="20240512 23:48:31.360" endtime="20240512 23:48:35.600"/>
+</kw>
+<kw name="E preencha o cadastro" library="cadastro">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Comece a usar grátis</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240512 23:48:35.601" endtime="20240512 23:48:35.676"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_e-mail_profissional}</arg>
+<arg>${e-mail_profissional}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 23:48:35.677" level="INFO">Typing text 'testeautomacao@robot.com' into text field '//input[@name='user[email]']'.</msg>
+<status status="PASS" starttime="20240512 23:48:35.676" endtime="20240512 23:48:36.222"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_primeiro_nome}</arg>
+<arg>${primeiro_nome}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 23:48:36.223" level="INFO">Typing text 'tAutomacao' into text field '//input[@name='user[profile_attributes][firstname]']'.</msg>
+<status status="PASS" starttime="20240512 23:48:36.222" endtime="20240512 23:48:36.369"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_segundo_nome}</arg>
+<arg>${segundo_nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 23:48:36.370" level="INFO">Typing text 'Robot' into text field '//input[@name='user[profile_attributes][lastname]']'.</msg>
+<status status="PASS" starttime="20240512 23:48:36.370" endtime="20240512 23:48:36.500"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_empresa}</arg>
+<arg>${empresa}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 23:48:36.502" level="INFO">Typing text 'testeAutomacao' into text field '//input[@name='user[profile_attributes][lastname]']'.</msg>
+<status status="PASS" starttime="20240512 23:48:36.500" endtime="20240512 23:48:36.659"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_ddd}</arg>
+<arg>${input_ddd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 23:48:36.660" level="INFO">Typing text '//input[@placeholder='DDD']' into text field '//input[@placeholder='DDD']'.</msg>
+<status status="PASS" starttime="20240512 23:48:36.659" endtime="20240512 23:48:36.808"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_numero}</arg>
+<arg>${numero}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 23:48:36.808" level="INFO">Typing text '123456789' into text field '//input[@placeholder='9 9999-9999']'.</msg>
+<status status="PASS" starttime="20240512 23:48:36.808" endtime="20240512 23:48:37.020"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_senha}</arg>
+<arg>${input_senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 23:48:37.022" level="INFO">Typing text '//input[@name='user[password]']' into text field '//input[@name='user[password]']'.</msg>
+<status status="PASS" starttime="20240512 23:48:37.021" endtime="20240512 23:48:37.211"/>
+</kw>
+<status status="PASS" starttime="20240512 23:48:35.601" endtime="20240512 23:48:37.212"/>
+</kw>
+<kw name="Então o botão Iniciar Teste deve estar habilitado" library="cadastro">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${botao_iniciarTeste}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240512 23:48:37.212" endtime="20240512 23:48:37.258"/>
+</kw>
+<status status="PASS" starttime="20240512 23:48:37.212" endtime="20240512 23:48:37.259"/>
+</kw>
+<status status="PASS" starttime="20240512 23:48:31.359" endtime="20240512 23:48:37.259"/>
+</test>
+<status status="PASS" starttime="20240512 23:48:30.978" endtime="20240512 23:48:37.261"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="testCaseProduttivo">testCaseProduttivo</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240512 23:48:31.026" level="ERROR">Error in file 'c:\Users\carol\Documents\_Robot\testeProduttivo\testCases\testCaseProduttivo.robot' on line 2: Library setting requires value.</msg>
+<msg timestamp="20240512 23:48:31.030" level="ERROR">Error in file 'c:\Users\carol\Documents\_Robot\testeProduttivo\testCases\testCaseProduttivo.robot' on line 3: Processing variable file '../resource/pages/cadastro.robot' failed: Importing variable file '../resource/pages/cadastro.robot' failed: ModuleNotFoundError: No module named '.'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\carol\AppData\Local\Programs\Python\Python312\Scripts\robot.exe
+  C:\Users\carol\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\carol\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\carol\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\carol\AppData\Local\Programs\Python\Python312
+  C:\Users\carol\AppData\Local\Programs\Python\Python312\Lib\site-packages</msg>
+</errors>
+</robot>
